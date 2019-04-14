@@ -30,12 +30,7 @@ subroutine sc4rk4
         dqq = -vx*(-qqp(i+2) + 8.d0*qqp(i+1) - 8.d0*qqp(i-1) + qqp(i-2))/12.d0/dx*dt
         qqm(i) = qq(i) + ratio*dqq
      enddo
-
      call bc(qqm)
-  enddo
-
-  do i = 1,nxg
-     qq(i) = qqm(i)
   enddo
   
   return

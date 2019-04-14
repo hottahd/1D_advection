@@ -5,7 +5,7 @@ subroutine cfl
   implicit none
   
   integer :: i
-  real(KIND(0.d0)) :: safety = 1.5
+  real(KIND(0.d0)) :: safety = 0.5
 !-----------------------------------------------------|  
 
   dt = safety*dx/vx

@@ -21,7 +21,10 @@ x = np.linspace(xmin + 0.5*dx, xmax - 0.5*dx,nx)
 endian = '<'
 
 plt.clf()
+fig = plt.figure(100,figsize=(6,3))
+
 for n in range(0,nd+1):
+    print(n)
     f = open(data_dir+'t.dac.'+'{0:08d}'.format(n),"rb")
     t = np.fromfile(f,endian+'d',1)
     f.close()
@@ -32,8 +35,11 @@ for n in range(0,nd+1):
     qq = np.fromfile(f,dtype=dtype,count=1)
     qq = qq["qq"].reshape(nx,order='F')
 
-    plt.plot(x,qq)
-    plt.xlim(0,1)
-    plt.ylim(0,1)
+    ax = fig.add_subplot(111)
+    ax.plot(x,qq)
+    ax.set_xlim(0.,1)
+    ax.set_ylim(-0.2,1.2)
     plt.pause(0.1)
-    print(t)
+
+    if(n != nd):
+        plt.clf()

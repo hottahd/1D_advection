@@ -24,9 +24,14 @@ subroutine model
   enddo
 
   xm = 0.5d0*(xmax + xmin)
-  dd = 0.1d0
+  dd = 0.03d0
   do i = 1,nxg
-     qq(i) = exp(-((x(i)-xm)/dd)**2)
+     !qq(i) = exp(-((x(i)-xm)/dd)**2)
+     if(x(i) < 0.5d0) then
+       qq(i) = 0.d0
+     else
+        qq(i) = 1.d0
+     endif
   enddo
      
   return
