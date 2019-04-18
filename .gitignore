@@ -1,3 +1,5 @@
 a.out
 data/*
 data
+*.o
+*.mod
