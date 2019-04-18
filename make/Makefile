@@ -28,4 +28,4 @@ $(UPDATE): $(OBJ_FILES)
 clean:
 	rm -rf $(OBJ_FILES) $(EXE_DIR)/a.out *.mod $(UPDATE)
 
--include $(DEPS)
+-include deps

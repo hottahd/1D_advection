@@ -7,8 +7,9 @@ subroutine mhd
   integer :: i
 !-----------------------------------------------------|
 
-  call cfl  
+  call cfl
   call sc4rk4
+  !call sc2rk2
   call artdif
 
   do i = 1,nxg

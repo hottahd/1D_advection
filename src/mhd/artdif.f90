@@ -5,7 +5,7 @@ subroutine artdif
   implicit none
 
   integer :: i
-  real(KIND(0.d0)), parameter :: fh = 2.d0, ep = 2.d0
+  real(KIND(0.d0)), parameter :: fh = 1.d0, ep = 1.d0
   real(KIND(0.d0)), dimension(nxg) :: fx,dui
   real(KIND(0.d0)) :: dul,dur,duc,mup,mlo
   real(KIND(0.d0)) :: ul,ur,du,ra,pp,cc
@@ -16,7 +16,7 @@ subroutine artdif
   enddo
 
   ! calculating artificial diffusivity flux
-  do i = 1,nxg-1
+  do i = 2,nxg-1
      dul = qqp(i  ) - qqp(i-1)
      dur = qqp(i+1) - qqp(i  )
      duc = 0.5d0*(qqp(i+1) - qqp(i-1))
@@ -27,7 +27,7 @@ subroutine artdif
      dui(i) = min(0.d0,mup) + max(0.d0,mlo)
   enddo
 
-  do i = 1,nxg-1
+  do i = 2,nxg-2
      ul = qqp(i  ) + 0.5d0*dui(i  )
      ur = qqp(i+1) - 0.5d0*dui(i+1)
      du = qqp(i+1) - qqp(i)
@@ -38,7 +38,7 @@ subroutine artdif
      fx(i) = -0.5d0*(ur - ul)*pp*cc
   enddo
 
-  do i = 2,nxg-1
+  do i = 3,nxg-2
      qqm(i) = qqm(i) -(fx(i) - fx(i-1))/dx*dt
   enddo
 
