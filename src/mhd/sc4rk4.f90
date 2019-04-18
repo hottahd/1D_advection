@@ -1,7 +1,7 @@
 !=====================================================|
 subroutine sc4rk4
 !=====================================================|
-  use back, only: qq,qqm,qqp,dx,dt,vx,nxg,margin
+  use geometry_def, only: qq,qqm,qqp,dx,dt,vx,nxg,margin
   implicit none
 
   integer :: i,mm

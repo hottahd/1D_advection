@@ -1,11 +1,11 @@
 !=====================================================|
 subroutine artdif
 !=====================================================|
-  use back, only: qq,qqm,qqp,nxg,vx,dx,dt
+  use geometry_def, only: qq,qqm,qqp,nxg,vx,dx,dt
   implicit none
 
   integer :: i
-  real(KIND(0.d0)), parameter :: fh = 1.1d0, ep = 1.d0
+  real(KIND(0.d0)), parameter :: fh = 2.d0, ep = 2.d0
   real(KIND(0.d0)), dimension(nxg) :: fx,dui
   real(KIND(0.d0)) :: dul,dur,duc,mup,mlo
   real(KIND(0.d0)) :: ul,ur,du,ra,pp,cc

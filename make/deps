@@ -1,0 +1,9 @@
+### This is auto-generated file. DO NOT EDIT
+main.o: back.o
+bc.o: geometry_def.o
+io.o: geometry_def.o
+artdif.o: geometry_def.o
+mhd.o: geometry_def.o
+cfl.o: geometry_def.o
+sc4rk4.o: geometry_def.o
+model.o: geometry_def.o

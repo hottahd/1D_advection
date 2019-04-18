@@ -1,7 +1,7 @@
 !=====================================================|
 program main
 !=====================================================|
-  use back, only: time,dt,ns,nd,data_dir
+  use geometry_def, only: time,dt,ns,nd,data_dir
   implicit none
 
   real(KIND(0.d0)) :: dtout,tend,timep

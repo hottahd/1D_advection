@@ -1,5 +1,5 @@
 !=====================================================|
-module back
+module geometry_def
 !=====================================================|
   integer, parameter :: nx = 100
   integer, parameter :: margin = 2
@@ -17,4 +17,4 @@ module back
 
   ! data directory
   character (len = 10),save :: data_dir
-end module back
+end module geometry_def

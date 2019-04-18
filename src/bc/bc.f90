@@ -1,7 +1,7 @@
 !=====================================================|
 subroutine bc(qq)
 !=====================================================|
-  use back, only: nxg,margin
+  use geometry_def, only: nxg,margin
   implicit none
 
   integer :: i

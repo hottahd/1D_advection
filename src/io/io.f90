@@ -1,7 +1,7 @@
 !=====================================================|
 subroutine io
 !=====================================================|
-  use back, only: ns,nd,time,data_dir,time &
+  use geometry_def, only: ns,nd,time,data_dir,time &
        & ,nx,nxg,margin,xmax,xmin,qq
   implicit none
   integer :: idf = 10

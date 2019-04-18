@@ -1,7 +1,7 @@
 !=====================================================|
 subroutine mhd
 !=====================================================|
-  use back, only: nxg,qq,qqm  
+  use geometry_def, only: nxg,qq,qqm  
   implicit none
 
   integer :: i
