@@ -11,6 +11,8 @@ subroutine mhd
   call sc4rk4
   !call sc2rk2
   call artdif
+  !call lf
+  !call ftcs
 
   do i = 1,nxg
      qq(i) = qqm(i)

@@ -18,7 +18,7 @@ program main
 !-----------------------------------------------------|  
 ! initial time counter
 
-  dtout = 0.1d0
+  dtout = 0.02d0
   time = 0.d0
   tend = 1.d0
   ns = 0
