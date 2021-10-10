@@ -8,15 +8,22 @@ subroutine mhd
 !-----------------------------------------------------|
 
   call cfl
-  call sc4rk4
+  !call sc4rk4
   !call sc2rk2
-  call artdif
-  !call lf
-  !call ftcs
+  call sc2ssprk2
 
   do i = 1,nxg
      qq(i) = qqm(i)
   enddo
+  
+  !call exp_diff
+  !call artdif
+  !call lf
+  !call ftcs
+
+  !do i = 1,nxg
+  !   qq(i) = qqm(i)
+  !enddo
   
 
   return

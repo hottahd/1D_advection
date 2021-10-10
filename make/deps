@@ -1,12 +1,15 @@
 ### This is auto-generated file. DO NOT EDIT
+ftcs.o: geometry_def.o
 bc.o: geometry_def.o
 artdif.o: geometry_def.o
 mhd.o: geometry_def.o
 cfl.o: geometry_def.o
 sc2rk2.o: geometry_def.o
 lf.o: geometry_def.o
+sc2ssprk2.o: geometry_def.o
 main.o: geometry_def.o
 io.o: geometry_def.o
 geometry_def.o: 
 sc4rk4.o: geometry_def.o
+exp_diff.o: geometry_def.o
 model.o: geometry_def.o

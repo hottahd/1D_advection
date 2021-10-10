@@ -1,7 +1,7 @@
 !=====================================================|
 subroutine model
 !=====================================================|
-  use geometry_def, only: vx,xmax,xmin,dx,x,qq &
+  use geometry_def, only: vx,kp,xmax,xmin,dx,x,qq &
        & ,nx,nxg,margin
   implicit none
   integer :: i
@@ -10,6 +10,8 @@ subroutine model
 !-----------------------------------------------------|
 
   vx = 1.d0
+  kp = 0.005d0
+  
   xmax = 1.d0
   xmin = 0.d0
 
@@ -24,7 +26,7 @@ subroutine model
   enddo
 
   xm = 0.5d0*(xmax + xmin)
-  dd = 0.04d0
+  dd = 0.1d0
   do i = 1,nxg
      qq(i) = exp(-((x(i)-xm)/dd)**2)
      !if(x(i) < 0.5d0) then

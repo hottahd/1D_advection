@@ -18,8 +18,13 @@ program main
 !-----------------------------------------------------|  
 ! initial time counter
 
+  ! output cadence
   dtout = 0.02d0
+
+  ! time counter
   time = 0.d0
+
+  ! end time
   tend = 1.d0
   ns = 0
   nd = 0
@@ -51,7 +56,6 @@ program main
   
   if(time < tend) goto 1000
   write(*,*) "### NORMAL END ###"
-  
   
   stop
 end program main
